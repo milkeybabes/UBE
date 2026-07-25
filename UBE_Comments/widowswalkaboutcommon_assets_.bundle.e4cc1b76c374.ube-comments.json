@@ -1,0 +1,45 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "widowswalkaboutcommon_assets_.bundle",
+    "sha256": "e4cc1b76c3741ae24847372a8df71d245eb11f3f2f70680bb0afa047f55f1bbe",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-25T06:27:30Z",
+  "comments": [
+    {
+      "source_name": "CAB-e43641bf68388a151c032b83580aa5d2",
+      "path_id": -8557910110059998328,
+      "asset_type": "AnimationClip",
+      "asset_name": "h5_eatyplant",
+      "comment": "Hole 5 Plant Eater",
+      "updated_utc": "2026-07-25T06:27:30Z"
+    },
+    {
+      "source_name": "CAB-e43641bf68388a151c032b83580aa5d2",
+      "path_id": -3312805689320013634,
+      "asset_type": "AnimationClip",
+      "asset_name": "Instruments",
+      "comment": "Hole 11 Voilins playing",
+      "updated_utc": "2026-07-25T06:26:06Z"
+    },
+    {
+      "source_name": "CAB-e43641bf68388a151c032b83580aa5d2",
+      "path_id": 978405223099046265,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 17 Small Spiders",
+      "updated_utc": "2026-07-25T06:24:55Z"
+    },
+    {
+      "source_name": "CAB-e43641bf68388a151c032b83580aa5d2",
+      "path_id": 5579437148114490429,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 17 Big Spider",
+      "updated_utc": "2026-07-25T06:23:37Z"
+    }
+  ]
+}

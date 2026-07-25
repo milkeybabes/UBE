@@ -1,0 +1,149 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "dinotrekcommon_assets_.bundle",
+    "sha256": "26233c83db958428a2697788595b9a6ff85dc1b6af1f15649fe6dca4616d77f5",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-24T09:34:02Z",
+  "comments": [
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -8403704955218873448,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Stegosaurus Sleepy Easy Level",
+      "updated_utc": "2026-07-24T08:36:12Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -7017120158669713220,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "T-Rex Easy Multi LOD",
+      "updated_utc": "2026-07-24T08:38:04Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -6020595068868791946,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Brachiosaurus Easy",
+      "updated_utc": "2026-07-24T08:45:01Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -5077845796457635613,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Pteranodon Flying",
+      "updated_utc": "2026-07-24T08:48:33Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -3958547944714552342,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Ankylosaurus Swinging Tail",
+      "updated_utc": "2026-07-24T08:49:53Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -3418112487774966706,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Triceratops Trike Easy Level",
+      "updated_utc": "2026-07-24T08:56:50Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -2430021003736086232,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Pteranodon Flying 2",
+      "updated_utc": "2026-07-24T09:10:38Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -2381951165841106413,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Ankylosaurus Swinging Tail Hard",
+      "updated_utc": "2026-07-24T09:20:21Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": -1330719847518610236,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Station Waggon Green",
+      "updated_utc": "2026-07-24T09:32:46Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 153932397225124417,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Pteranodon Flying 3",
+      "updated_utc": "2026-07-24T09:23:43Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 572249081279513190,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Stegosaurus Sleeping Hard Level",
+      "updated_utc": "2026-07-24T09:25:37Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 942095626690557088,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Velociraptor chewing rubber ring",
+      "updated_utc": "2026-07-24T09:27:13Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 1097434205747122012,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Camper Van",
+      "updated_utc": "2026-07-24T09:28:37Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 2098489930728354015,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Station Waggon Brown",
+      "updated_utc": "2026-07-24T09:33:07Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 3838837592021644767,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Pteranodon Flying 4",
+      "updated_utc": "2026-07-24T09:32:05Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 4486004570106622890,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Plesiosaurus",
+      "updated_utc": "2026-07-24T09:34:02Z"
+    },
+    {
+      "source_name": "CAB-f1531b73d73b36d481aaf70f896f7d16",
+      "path_id": 7241531853556782975,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Brachiosaurus Hard",
+      "updated_utc": "2026-07-24T09:31:33Z"
+    }
+  ]
+}

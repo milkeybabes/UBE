@@ -1,0 +1,77 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "amusementparkcommon_assets_.bundle",
+    "sha256": "bee8b92e871e620252297d50bfaa65ca5a4a37d5dec789b0474500f294f306b2",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-22T11:01:08Z",
+  "comments": [
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": -5172310084237939469,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Ferris wheel (very slow)",
+      "updated_utc": "2026-07-22T10:53:13Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": -2977332287101766453,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Black Crow",
+      "updated_utc": "2026-07-22T10:55:30Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": -365855127407947881,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Black Crow 2",
+      "updated_utc": "2026-07-22T10:55:50Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": 937487221286660000,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Roller Coaster",
+      "updated_utc": "2026-07-22T10:56:34Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": 2372773440134720887,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Ferris Wheel full rotation",
+      "updated_utc": "2026-07-22T10:57:27Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": 3643110900980529225,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Fortune Teller",
+      "updated_utc": "2026-07-22T10:58:17Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": 4070267880667997751,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Sheep Carousel (Merry Go Round)",
+      "updated_utc": "2026-07-22T11:00:29Z"
+    },
+    {
+      "source_name": "CAB-dc668ca62ff8589fa149067578010b88",
+      "path_id": 6605385520118165807,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Crow 3",
+      "updated_utc": "2026-07-22T11:01:08Z"
+    }
+  ]
+}

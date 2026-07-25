@@ -1,0 +1,237 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "labyrinthcommon_assets_.bundle",
+    "sha256": "50cf6f5e0dff4a8495edc38b80052ed0f8a374c3e2a8f321ed7a3e2e8d7010b7",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-23T23:58:39Z",
+  "comments": [
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 6730125351914578010,
+      "asset_type": "AnimationClip",
+      "asset_name": "Close_Idle",
+      "comment": "Wooden Door Closed",
+      "updated_utc": "2026-07-23T23:58:39Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -812240397710571598,
+      "asset_type": "AnimationClip",
+      "asset_name": "DoorClosed_Idle4",
+      "comment": "Riddle Doors Closed",
+      "updated_utc": "2026-07-23T23:58:19Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -4651832923142590247,
+      "asset_type": "AnimationClip",
+      "asset_name": "DoorOpen_Idle4",
+      "comment": "Riddle Doors one aside",
+      "updated_utc": "2026-07-23T23:58:05Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -6643072827497513374,
+      "asset_type": "AnimationClip",
+      "asset_name": "DoorOpening4",
+      "comment": "The Riddle Doors",
+      "updated_utc": "2026-07-23T23:55:21Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 3896314359728955822,
+      "asset_type": "AnimationClip",
+      "asset_name": "Full_Idle03",
+      "comment": "Toby Crawl",
+      "updated_utc": "2026-07-23T23:54:35Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 2238757648964095627,
+      "asset_type": "AnimationClip",
+      "asset_name": "Full_Idle04",
+      "comment": "Ello Worm",
+      "updated_utc": "2026-07-23T23:54:03Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 4020052495038201379,
+      "asset_type": "AnimationClip",
+      "asset_name": "Full_Idle3",
+      "comment": "Toby Crawling",
+      "updated_utc": "2026-07-23T23:52:56Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -5036890683349408826,
+      "asset_type": "AnimationClip",
+      "asset_name": "FullFlight_01",
+      "comment": "Flying Owl",
+      "updated_utc": "2026-07-23T23:52:30Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 3701322101158114935,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle",
+      "comment": "Close hands",
+      "updated_utc": "2026-07-23T23:52:18Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 3701938048518526988,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle",
+      "comment": "Crossing Hands",
+      "updated_utc": "2026-07-23T23:51:51Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -8376636468310322544,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle01",
+      "comment": "Ludo looking around",
+      "updated_utc": "2026-07-23T23:35:47Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -3643141638978847424,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle03",
+      "comment": "Many hands in cave",
+      "updated_utc": "2026-07-23T23:36:27Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -2597535894369037134,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle08",
+      "comment": "Ludo upside down",
+      "updated_utc": "2026-07-23T23:36:51Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -5884101958547509512,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Spiky Goblin Corps",
+      "updated_utc": "2026-07-23T23:51:36Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -2651980025025070399,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Rock face eyes1",
+      "updated_utc": "2026-07-23T23:37:24Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -2456587301878228006,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Rock face eyes2",
+      "updated_utc": "2026-07-23T23:37:32Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -1458835777938011724,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Goblin Corps",
+      "updated_utc": "2026-07-23T23:51:13Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 1240764578269528030,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Group of hands two sets",
+      "updated_utc": "2026-07-23T23:38:17Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 8460698819510489682,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_01",
+      "comment": "Square Rockface eyes with mouth",
+      "updated_utc": "2026-07-23T23:38:53Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -7014986863021618305,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_02",
+      "comment": "Sir Didymus and Ambrosius",
+      "updated_utc": "2026-07-23T23:40:42Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -6936285981808690726,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_02",
+      "comment": "20 Pairs of Hands",
+      "updated_utc": "2026-07-23T23:42:53Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -3324928532876212338,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_05",
+      "comment": "Chickens",
+      "updated_utc": "2026-07-23T23:45:42Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 3074513937541952993,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle_05",
+      "comment": "Tunnel Gobblins",
+      "updated_utc": "2026-07-23T23:47:05Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -3440210500299666629,
+      "asset_type": "AnimationClip",
+      "asset_name": "KillingFairies",
+      "comment": "Hoggle Spraying Faries",
+      "updated_utc": "2026-07-23T23:57:16Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 3004726421195822853,
+      "asset_type": "AnimationClip",
+      "asset_name": "Open_Idle",
+      "comment": "Doors with Clubs in mouth",
+      "updated_utc": "2026-07-23T23:47:30Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -249199002246330797,
+      "asset_type": "AnimationClip",
+      "asset_name": "Opening",
+      "comment": "Doors Opening with Clubs in mouth",
+      "updated_utc": "2026-07-23T23:47:44Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": 946460863554185732,
+      "asset_type": "AnimationClip",
+      "asset_name": "Owl_FullFlight",
+      "comment": "Flying Owl 2",
+      "updated_utc": "2026-07-23T23:57:47Z"
+    },
+    {
+      "source_name": "CAB-1ed85af4740a972d41ebce94181b7bf5",
+      "path_id": -5470159223610051950,
+      "asset_type": "AnimationClip",
+      "asset_name": "Sleepy",
+      "comment": "Sleepy Wise man",
+      "updated_utc": "2026-07-23T23:48:10Z"
+    }
+  ]
+}

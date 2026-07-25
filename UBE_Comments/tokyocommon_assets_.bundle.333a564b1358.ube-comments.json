@@ -1,0 +1,101 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "tokyocommon_assets_.bundle",
+    "sha256": "333a564b1358122aa17c21b0686360c1ef443a65544f46a21cf6db21b1df6c32",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-25T02:28:34Z",
+  "comments": [
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -6109206806822914919,
+      "asset_type": "AnimationClip",
+      "asset_name": "Dance",
+      "comment": "Bakezori Animation",
+      "updated_utc": "2026-07-25T02:06:44Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": 5274446894445918006,
+      "asset_type": "AnimationClip",
+      "asset_name": "h03_Cat_anim",
+      "comment": "Hole 3 Cats",
+      "updated_utc": "2026-07-25T02:05:51Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -7456214427796566219,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Billboard Cat",
+      "updated_utc": "2026-07-25T02:08:19Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -5734161277629468040,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Tokyo Train in a loop",
+      "updated_utc": "2026-07-25T02:22:25Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -4607447096526244014,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Train Doors Opening",
+      "updated_utc": "2026-07-25T02:22:53Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -2416598196476912280,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Onsen Chimes",
+      "updated_utc": "2026-07-25T02:24:30Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -1845303493907560551,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 3 Cats",
+      "updated_utc": "2026-07-25T02:25:06Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": -1476595712334661425,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Sushi Dishes",
+      "updated_utc": "2026-07-25T02:25:35Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": 1448837696297166657,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Capybara Animations",
+      "updated_utc": "2026-07-25T02:26:12Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": 1998602689586196364,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Lucky Cats",
+      "updated_utc": "2026-07-25T02:27:54Z"
+    },
+    {
+      "source_name": "CAB-455834d0348e3b704571d4d7c1a83fee",
+      "path_id": 5976850328734623058,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 18 Two cats",
+      "updated_utc": "2026-07-25T02:28:34Z"
+    }
+  ]
+}

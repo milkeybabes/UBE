@@ -1,0 +1,149 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "villainsarcticcommon_assets_.bundle",
+    "sha256": "cee984810010ff9cc19021e4f6f13cd33f868d64f9731e218f27b9fcc79532e3",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "6000.3.9f1"
+  },
+  "updated_utc": "2026-07-25T06:19:42Z",
+  "comments": [
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 7225954510478720354,
+      "asset_type": "AnimationClip",
+      "asset_name": "Call",
+      "comment": "Puffin Calling",
+      "updated_utc": "2026-07-25T06:11:08Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -64383920932942448,
+      "asset_type": "AnimationClip",
+      "asset_name": "EndIdle",
+      "comment": "Puffin talking",
+      "updated_utc": "2026-07-25T06:11:55Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -9047975862030966059,
+      "asset_type": "AnimationClip",
+      "asset_name": "PuffinDisappear",
+      "comment": "Puffin Disappear",
+      "updated_utc": "2026-07-25T06:12:40Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 7200333184353937653,
+      "asset_type": "AnimationClip",
+      "asset_name": "PuffinDisappear",
+      "comment": "Puffin with Redeye Fall away",
+      "updated_utc": "2026-07-25T06:19:42Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -8598702310051666047,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 5 Puffin Follow",
+      "updated_utc": "2026-07-25T06:13:25Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -6096744944539957149,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 4 Puffin Follow",
+      "updated_utc": "2026-07-25T06:13:44Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -5049070562255485103,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Orca Swimming",
+      "updated_utc": "2026-07-25T06:14:11Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -4642654827302080373,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 2 Puffin Follow",
+      "updated_utc": "2026-07-25T06:14:23Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -2448574079395584705,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 1 Puffin Follow",
+      "updated_utc": "2026-07-25T06:14:38Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 82471851160818248,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 3 Puffin Follow",
+      "updated_utc": "2026-07-25T06:14:52Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 6206192445044671342,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Colony of Puffins",
+      "updated_utc": "2026-07-25T06:16:10Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 6334019018678023975,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 4 Stepping Puffin",
+      "updated_utc": "2026-07-25T06:16:47Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 7110496218345961472,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 1 Puffin looking",
+      "updated_utc": "2026-07-25T06:17:12Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 7242961533958372001,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 5 Rocking Puffin",
+      "updated_utc": "2026-07-25T06:17:32Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 8621712728622441638,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 3 Bored Puffin",
+      "updated_utc": "2026-07-25T06:17:59Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": 8891211501046156787,
+      "asset_type": "AnimationClip",
+      "asset_name": "Scene",
+      "comment": "Hole 2 Looking about Puffin",
+      "updated_utc": "2026-07-25T06:18:19Z"
+    },
+    {
+      "source_name": "CAB-39ed3ba2dd64eadd5fc3300e65ba9152",
+      "path_id": -4450263122986749033,
+      "asset_type": "AnimationClip",
+      "asset_name": "StartIdle",
+      "comment": "Puffin with Redeye",
+      "updated_utc": "2026-07-25T06:19:00Z"
+    }
+  ]
+}

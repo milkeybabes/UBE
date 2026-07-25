@@ -1,0 +1,61 @@
+{
+  "format": "UBE comments",
+  "format_version": 1,
+  "bundle": {
+    "name": "data.unity3d",
+    "sha256": "6332d2d1233b76ae6ef39c1dbe93fac70e86141bed32648339b5bd754d74ac2b",
+    "source_kind": "unityfs_bundle",
+    "unity_version": "2021.3.27f1"
+  },
+  "updated_utc": "2026-07-23T04:18:47Z",
+  "comments": [
+    {
+      "source_name": "resources.assets",
+      "path_id": 1073,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle01",
+      "comment": "Bomb Geo Idle 01",
+      "updated_utc": "2026-07-23T04:14:26Z"
+    },
+    {
+      "source_name": "resources.assets",
+      "path_id": 1118,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle02",
+      "comment": "Bomb Geo Idle 02",
+      "updated_utc": "2026-07-23T04:14:15Z"
+    },
+    {
+      "source_name": "resources.assets",
+      "path_id": 1115,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle03",
+      "comment": "Bomb Geo Idle 03",
+      "updated_utc": "2026-07-23T04:13:59Z"
+    },
+    {
+      "source_name": "resources.assets",
+      "path_id": 983,
+      "asset_type": "AnimationClip",
+      "asset_name": "Idle04",
+      "comment": "Bomb Geo Idle 04",
+      "updated_utc": "2026-07-23T04:13:39Z"
+    },
+    {
+      "source_name": "resources.assets",
+      "path_id": 977,
+      "asset_type": "AnimationClip",
+      "asset_name": "InHand04",
+      "comment": "Bomb Geo Inhand 04",
+      "updated_utc": "2026-07-23T04:17:57Z"
+    },
+    {
+      "source_name": "resources.assets",
+      "path_id": 1004,
+      "asset_type": "AnimationClip",
+      "asset_name": "TensionAngryStart",
+      "comment": "Bomb Geo Tension Start",
+      "updated_utc": "2026-07-23T04:18:47Z"
+    }
+  ]
+}
