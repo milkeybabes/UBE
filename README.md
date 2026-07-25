@@ -672,13 +672,13 @@ The tool also benefited from extensive hands-on testing across many real Unity a
 ## License
 
 Unity Bundle Explorer is licensed under the
-[Apache License 2.0](LICENSE).
+[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
 Copyright © 2026 Michael Archer.
 
 Redistributions and derivative works must preserve the applicable copyright,
 licence and attribution notices as required by the Apache License 2.0.
-See [NOTICE](NOTICE) for the original project attribution.
+See [NOTICE](./NOTICE) for the original project attribution.
 
 ## Support the project
 
