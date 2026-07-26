@@ -107,8 +107,8 @@ See [Audio preview](#audio-preview).
 ### 1. Download or clone the repository
 
 ```bash
-git clone <your-repository-url>
-cd <repository-folder>
+git clone https://github.com/milkeybabes/UBE
+cd UBE
 ```
 
 A GitHub ZIP download is also fine. Extract the complete repository before running UBE.
