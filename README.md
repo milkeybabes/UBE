@@ -842,7 +842,7 @@ Unity Bundle Explorer is provided free of charge.
 
 Development has involved extensive investigation and testing across many Unity
 asset formats, animation systems, material layouts and game versions. If UBE
-has been useful to you and you would like to support its continued development:
+has been useful to you and you would like to show a bit of love and support:
 
 ☕ [Buy Me a Coffee](https://buymeacoffee.com/mikeybabes)
 
@@ -857,3 +857,10 @@ For direct contact:
 
 **Michael Archer**  
 **Email:** [mikeybabes@gmail.com](mailto:mikeybabes@gmail.com)
+
+## Full Feature Video
+
+[![Watch a long overview video](https://img.youtube.com/vi/U73rAYlqbV8/maxresdefault.jpg)](https://www.youtube.com/watch?v=U73rAYlqbV8)
+
+▶️ **[[Watch a long overview video on YouTube](https://www.youtube.com/watch?v=U73rAYlqbV8)**
+
