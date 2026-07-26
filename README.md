@@ -20,6 +20,7 @@ UBE is designed for investigation rather than blind extraction. Its main goal is
 - [Installation](#installation)
 - [Running UBE](#running-ube)
 - [Opening Unity data](#opening-unity-data)
+- [Project Path ID Index and Performance](#project-path-id-index-and-performance)
 - [Main features](#main-features)
 - [Animation support](#animation-support)
 - [Material and texture recovery](#material-and-texture-recovery)
@@ -210,6 +211,155 @@ GameData/
 Do not open a `.resource` or `.resS` file directly. Open its associated serialized asset file and let UBE read the external resource automatically.
 
 ---
+
+## Project Path ID Index and Performance
+
+Large Unity projects may contain hundreds of bundles and millions of serialized
+objects. Loading every bundle whenever UBE opens a project would use substantial
+memory and make the interface appear frozen.
+
+UBE therefore uses two levels of reference resolution:
+
+1. **Course or folder-local resolution** for nearby and obviously related
+   bundles.
+2. An optional project-wide Path ID index for locating assets elsewhere in a
+   large bundle collection.
+
+The generated index is named:
+
+```text
+.ube_pathid_index.json
+```
+
+It stores lightweight information including:
+
+- Path ID
+- Unity asset type
+- asset name
+- relative bundle path
+
+The original bundles are not modified.
+
+### When the index is useful
+
+A project-wide index is useful when:
+
+- Unity assets reference materials or textures in distant bundles;
+- the same Path ID needs to be located across a large project;
+- an inspector contains an unresolved external Path ID;
+- bundles are organised into many course or content folders;
+- manually opening every possible dependency would be too slow.
+
+UBE deliberately avoids loading the complete JSON index into memory during
+normal project startup. Large indexes may contain millions of records.
+
+### Building or rebuilding the index
+
+Open Command Prompt or PowerShell in the UBE repository folder and activate the
+same Python environment used to run UBE.
+
+To recursively index every `.bundle` file beneath a project folder:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Path\To\UnityProject" --recursive
+```
+
+For example:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Pico4\WalkAboutMiniGolf" --recursive
+```
+
+The completed index is written to:
+
+```text
+G:\Path\To\UnityProject\.ube_pathid_index.json
+```
+
+Existing indexes are safely replaced through a temporary file after the new
+index has finished building.
+
+### Indexing only one folder
+
+Without `--recursive`, only `.bundle` files directly inside the selected folder
+are indexed:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Path\To\BundleFolder"
+```
+
+Subfolders are ignored in this mode.
+
+### Searching for one Path ID
+
+The same module can search an existing index without loading the complete JSON
+file into memory:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Path\To\UnityProject" --pathID 123456789
+```
+
+Negative Unity Path IDs are also supported:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Path\To\UnityProject" --pathID -4977430198280659608
+```
+
+The command reports matching assets with their:
+
+- asset type;
+- name;
+- relative bundle path;
+- complete bundle path.
+
+Both spellings are accepted:
+
+```text
+--pathID
+--pathid
+```
+
+### Limiting search results
+
+Path IDs are normally unique within one serialized file, but the same numeric
+Path ID may occur in several bundles. Use `--max` to limit the displayed
+matches:
+
+```bat
+python -m unity_bundle_explorer.build_pathid_index "G:\Path\To\UnityProject" --pathID 123456789 --max 20
+```
+
+### Rebuilding after project changes
+
+Rebuild the index after:
+
+- adding or replacing bundles;
+- installing a new game or course version;
+- moving bundles between folders;
+- changing the project root;
+- seeing results that refer to old bundle locations.
+
+The old index can be deleted safely:
+
+```text
+.ube_pathid_index.json
+```
+
+UBE can still open and inspect bundles without it. Project-wide Path ID searches
+and some distant external-reference lookups may simply be unavailable until the
+index is rebuilt.
+
+### Current file coverage
+
+The current index builder scans files ending in:
+
+```text
+.bundle
+```
+
+Unity `.assets`, `.resource` and `.resS` files are not added independently by
+this particular project-index command. Resource data referenced by a bundle may
+still be used when that bundle is opened normally through UBE.
 
 ## Main features
 
