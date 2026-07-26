@@ -18,6 +18,7 @@ UBE is designed for investigation rather than blind extraction. Its main goal is
 - [Highlights](#highlights)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Installation Video](#installation_video)
 - [Running UBE](#running-ube)
 - [Opening Unity data](#opening-unity-data)
 - [Project Path ID Index and Performance](#project-path-id-index-and-performance)
@@ -113,6 +114,11 @@ cd UBE
 
 A GitHub ZIP download is also fine. Extract the complete repository before running UBE.
 
+## Installation Video
+
+[![Watch the UBE installation guide](https://img.youtube.com/vi/gWeIn3yFxU8/maxresdefault.jpg)](https://www.youtube.com/watch?v=gWeIn3yFxU8)
+
+▶️ **[Watch the UBE installation guide on YouTube](https://www.youtube.com/watch?v=gWeIn3yFxU8)**
 ### 2. Create a virtual environment
 
 #### Windows
