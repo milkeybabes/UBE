@@ -1,4 +1,4 @@
-# Unity Bundle Explorer — Companion Utilities ( Tools Folder )
+# Unity Bundle Explorer — Companion Utilities
 
 These command-line utilities extend **Unity Bundle Explorer (UBE)** before, during, and after the main inspection workflow.
 
@@ -7,6 +7,7 @@ UBE provides the visual environment for opening Unity bundles, browsing assets, 
 - finding Unity bundles inside Android APK and OBB archives;
 - identifying Unity versions and file types;
 - comparing bundles from different game versions;
+- batch-exporting textures from large collections of small Unity bundles;
 - rediscovering an asset from a name, PathID, screenshot or old note;
 - validating UBE OBJ and GLB exports;
 - correcting the position and orientation of exported GLB models for viewing, rendering or video.
@@ -15,16 +16,89 @@ These tools are intentionally separate from the UBE interface. They can be used 
 
 ---
 
+## Optional graphical launcher
+
+`ube_utilities_gui.py` provides a lean graphical front end for the complete utility collection.
+
+It does not replace or duplicate any utility. The launcher builds the normal command, starts the original script as a separate process, and displays its live console output inside the window.
+
+The interface provides:
+
+- a utility selector;
+- a short help paragraph for the selected tool;
+- file and folder Browse buttons;
+- only the options relevant to that utility;
+- less-common options under **Show advanced options**;
+- dependency status for UnityPy, optional LZ4 support and Blender;
+- an exact command preview;
+- Run, Cancel and Open Output Folder controls;
+- a live output log;
+- remembered folders and settings.
+
+### Start on Windows
+
+Double-click:
+
+```text
+Launch UBE Utilities.bat
+```
+
+Or run:
+
+```bat
+python ube_utilities_gui.py
+```
+
+### Start on macOS
+
+Double-click:
+
+```text
+Launch UBE Utilities.command
+```
+
+On the first launch, macOS may require you to **right-click the file and choose Open**.
+
+If its executable permission was lost:
+
+```bash
+chmod +x "Launch UBE Utilities.command"
+./Launch\ UBE\ Utilities.command
+```
+
+The direct Python command always remains available:
+
+```bash
+python3 ube_utilities_gui.py
+```
+
+The `.command` launcher checks local virtual environments, common Apple Silicon and Intel Python locations, and the normal command path.
+
+Finder runs `.command` files through Terminal, but utility selection, settings and output are all handled in the graphical window.
+
+### Start on Linux
+
+```bash
+python3 ube_utilities_gui.py
+```
+
+The launcher uses Python's standard Tkinter interface. A Python build without Tk support must be replaced by, or supplemented with, a build that provides Tk/Tcl.
+
+---
+
 ## Utilities at a glance
 
 | Utility | Main purpose |
 |---|---|
+| `ube_utilities_gui.py` | Optional graphical front end for selecting, configuring and running all companion utilities. |
 | `huntunity.py` | Find and extract UnityFS bundles from Android `.apk` and `.obb` archives. |
 | `unity_bundle_header_scan.py` | Quickly identify Unity bundle signatures, versions and header information. |
 | `unity_bundle_audit.py` | Produce a deeper UnityFS audit and compare bundles from different folders or releases. |
+| `unity_bundle_texture_extractor.py` | Batch-export `Texture2D` images from many Unity bundles as correctly named PNG files. |
 | `ube_lookup_search.py` | Search UBE indexes, caches, reports and databases for asset names, PathIDs or bundle names. |
 | `ube_export_validator.py` | Check exported OBJ/MTL/texture sets and GLB files for structural problems. |
 | `glb_presentation_corrector.py` | Re-centre, ground and rotate GLB exports without changing their original geometry or animation tracks. |
+| `glb_thumbnail_batch.py` | Render quick PNG or JPG previews of GLB files through Blender with model-scale-corrected lighting. |
 
 ---
 
@@ -35,10 +109,11 @@ A typical investigation can use the utilities in this order:
 1. **Extract bundles** from APK or OBB archives with `huntunity.py`.
 2. **Identify Unity versions and file types** with `unity_bundle_header_scan.py`.
 3. **Audit or compare bundle releases** with `unity_bundle_audit.py`.
-4. **Open and inspect the bundles in UBE.**
-5. **Rediscover a previously seen asset** with `ube_lookup_search.py`.
-6. **Validate exported models** with `ube_export_validator.py`.
-7. **Prepare GLB files for presentation** with `glb_presentation_corrector.py`.
+4. **Batch-export simple texture bundles** with `unity_bundle_texture_extractor.py` when opening them individually in UBE would be repetitive.
+5. **Open and inspect more complex bundles in UBE.**
+6. **Rediscover a previously seen asset** with `ube_lookup_search.py`.
+7. **Validate exported models** with `ube_export_validator.py`.
+8. **Prepare GLB files for presentation** with `glb_presentation_corrector.py`.
 
 Not every investigation needs every step. Each utility is useful on its own.
 
@@ -48,6 +123,7 @@ Not every investigation needs every step. Each utility is useful on its own.
 
 - Python **3.10 or newer**
 - No Unity installation is required
+- The graphical launcher uses Python's standard Tkinter interface
 - Most utilities use only the Python standard library
 
 The deeper UnityFS audit can optionally decode LZ4-compressed directory information. Install the `lz4` package when required:
@@ -55,6 +131,14 @@ The deeper UnityFS audit can optionally decode LZ4-compressed directory informat
 ```bat
 python -m pip install lz4
 ```
+
+The texture batch extractor uses UnityPy to decode Unity `Texture2D` data, including streamed texture resources:
+
+```bat
+python -m pip install UnityPy
+```
+
+When UBE is already installed from source, run the extractor using the same Python environment as UBE so it can use the existing UnityPy installation.
 
 Display the built-in help for any utility with:
 
@@ -293,7 +377,185 @@ This tool is particularly helpful when comparing an older working game release a
 
 ---
 
-# 4. Rediscover assets from names, PathIDs or notes
+# 4. Batch-export textures from many small bundles
+
+## `unity_bundle_texture_extractor.py`
+
+Some games store menu artwork, course logos, icons and other images as hundreds of tiny Unity bundles, with each bundle containing only one useful `Texture2D`.
+
+Opening every bundle manually in UBE works, but it is unnecessarily slow when the task is simply:
+
+> Open bundle → select texture → export PNG → repeat.
+
+`unity_bundle_texture_extractor.py` automates that complete job. It recursively scans a file or folder, loads each Unity bundle independently, decodes its textures and writes normal PNG files using the real Unity asset names.
+
+A practical Walkabout Mini Golf course-image run exported **147 correct images**, including separate easy and hard course artwork, in one batch. Doing the same operation manually would have required opening and exporting every bundle individually.
+
+## Basic usage
+
+Process every `.bundle` and `.unity3d` file in a folder and its subfolders:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages"
+```
+
+By default, output is written to:
+
+```text
+G:\Pico4\CourseImages\Extracted_Textures
+```
+
+## Choose a custom output folder
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --out "G:\Pico4\Extracted Course Images"
+```
+
+## Process one bundle
+
+```bat
+python unity_bundle_texture_extractor.py ^
+  "G:\Pico4\CourseImages\course_logo.bundle"
+```
+
+## Process only the top folder
+
+The scan is recursive by default. Disable recursion with:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --no-recursive
+```
+
+## Write each PNG beside its source bundle
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --same-folder
+```
+
+## Overwrite existing PNG files
+
+Existing same-name output is skipped by default. Use `--overwrite` to replace it:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --overwrite
+```
+
+## Preview the operation without writing images
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --dry-run
+```
+
+## Use the folder picker
+
+Running the script without an input path opens a folder-selection window:
+
+```bat
+python unity_bundle_texture_extractor.py
+```
+
+## Texture names and output files
+
+The script uses the real Unity `Texture2D` asset name for each PNG rather than the often extremely long Addressables bundle filename.
+
+For example, bundles named like:
+
+```text
+courseimages_assets_assets_textures_mainmenu_logos_tokyo_logo.psd_d0d443dbb5f275b089f366499ade6c43.bundle
+courseimages_assets_assets_textures_mainmenu_logos_vegas_logo_2.png_d0aae9f2060ac6506d85730fe7cf3d0b.bundle
+courseimages_assets_assets_textures_mainmenu_logos_wag_logo.png_dc100e4f78224cf180cb88ac5c6c7465.bundle
+```
+
+can produce clean output such as:
+
+```text
+Tokyo_Logo.png
+Vegas_Logo_2.png
+WAG_Logo.png
+```
+
+If a texture has no usable internal name, the utility creates a cleaned fallback name from the bundle filename.
+
+## Texture2D versus Sprite export
+
+The default operation exports `Texture2D` objects only.
+
+That is intentional: many small image bundles contain both one `Texture2D` and one Sprite that references the same texture. Exporting both would often create duplicate images.
+
+To also export Sprite objects:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --include-sprites
+```
+
+This option is useful when a Sprite represents only a cropped region of a texture atlas rather than the complete underlying image.
+
+## Attempt files without normal Unity extensions
+
+Folder scans normally consider `.bundle` and `.unity3d` files. To attempt every file:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --all-files
+```
+
+This can be useful for extensionless Unity files, but it may also produce harmless load errors for unrelated files.
+
+## Output report
+
+Each run writes:
+
+```text
+unity_texture_extract_report.tsv
+```
+
+The report includes:
+
+- status;
+- source bundle;
+- asset type;
+- PathID;
+- asset name;
+- width and height;
+- Unity texture format;
+- output PNG path;
+- error or status message.
+
+The TSV is written with spreadsheet-friendly tab-separated columns.
+
+## Batch safety
+
+The extractor is designed for large unattended runs:
+
+- one failed bundle does not stop the rest of the batch;
+- streamed `.resS` texture data is decoded while the bundle remains loaded;
+- existing output is not replaced unless requested;
+- duplicate asset names within one run receive numbered filenames rather than overwriting each other;
+- Windows-invalid filename characters and reserved names are cleaned;
+- a final summary reports exported, skipped, empty and failed bundles.
+
+### Best use
+
+Use the texture extractor when the bundle collection is repetitive and the required result is simply the image content.
+
+Continue to use UBE when you need to inspect:
+
+- materials and shader relationships;
+- Sprite rectangles or atlases;
+- mesh and GameObject ownership;
+- external references;
+- unusual texture channels;
+- animation, audio or complete object hierarchies.
+
+---
+
+# 5. Rediscover assets from names, PathIDs or notes
 
 ## `ube_lookup_search.py`
 
@@ -410,7 +672,7 @@ Useful search terms include:
 
 ---
 
-# 5. Validate UBE model exports
+# 6. Validate UBE model exports
 
 ## `ube_export_validator.py`
 
@@ -486,7 +748,7 @@ Passing validation means that the file is structurally consistent according to t
 
 ---
 
-# 6. Prepare GLB exports for viewing, rendering or video
+# 7. Prepare GLB exports for viewing, rendering or video
 
 ## `glb_presentation_corrector.py`
 
@@ -650,6 +912,52 @@ Try scanning recursively and ignoring the extension filter:
 python unity_bundle_header_scan.py "G:\Pico4\Explorer" --recursive --all
 ```
 
+## The texture extractor cannot import UnityPy
+
+Run it with the same Python installation used by UBE, or install UnityPy:
+
+```bat
+python -m pip install UnityPy
+```
+
+To confirm which Python is being used:
+
+```bat
+where python
+python -c "import sys; print(sys.executable)"
+```
+
+## The texture extractor finds no bundles
+
+The default folder scan looks for `.bundle` and `.unity3d` files.
+
+Try:
+
+```bat
+python unity_bundle_texture_extractor.py "G:\Pico4\CourseImages" ^
+  --all-files
+```
+
+Also confirm that the selected folder actually contains the bundles or that recursion has not been disabled.
+
+## The texture extractor creates fewer files than bundles
+
+This is not automatically an error. A bundle may contain no `Texture2D`, contain several textures, fail to load, or contain a texture whose output already exists and was skipped.
+
+Review:
+
+```text
+unity_texture_extract_report.tsv
+```
+
+The final console summary also separates exported, skipped, empty and failed bundles.
+
+## The texture extractor creates duplicate-looking images
+
+A bundle can contain a `Texture2D` and a Sprite referencing the same image.
+
+Do not use `--include-sprites` unless Sprite-region exports are specifically required.
+
 ## Lookup search returns too many matches
 
 Use a second identifying term together with `--mode all`:
@@ -703,12 +1011,17 @@ These utilities are designed to increase the practical value of UBE without over
 They cover the repetitive jobs around the application:
 
 - **before UBE:** locate, extract, identify and compare bundles;
+- **alongside UBE:** batch-export repetitive single-texture bundles without opening them one by one;
 - **during investigation:** rediscover assets and connect old notes to their source;
 - **after export:** validate files and prepare models for external viewing or presentation.
 
 Together, UBE and its companion utilities form a broader toolkit for investigating Unity game data rather than only a single bundle viewer.
 
 ---
+
+## Responsible use
+
+Use these utilities only with files that you own or have permission to inspect. Game assets and other extracted content may remain protected by copyright, licence agreements or other restrictions.
 
 ## Responsible use
 
