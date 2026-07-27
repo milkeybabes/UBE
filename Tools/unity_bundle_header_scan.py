@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 unity_bundle_header_scan.py
 
 Fast header inspector for folders of Unity bundles / UnityFS files.
