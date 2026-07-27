@@ -1,3 +1,0 @@
-# Only required by particular utilities, not by the GUI launcher itself.
-UnityPy
-lz4
